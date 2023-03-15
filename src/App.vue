@@ -25,7 +25,12 @@ export default {
 
 <template>
   <AppHeader />
-  <main class="container"></main>
+  <main class="container">
+    <ul v-if="projects.length">
+      <li v-for="project in projects" :key="project.id">{{ project.title }}</li>
+    </ul>
+    <h5 v-else>Non ci sono post</h5>
+  </main>
 </template>
 
 <style></style>
