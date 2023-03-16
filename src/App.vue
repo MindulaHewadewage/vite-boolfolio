@@ -1,11 +1,11 @@
 <script>
 import axios from 'axios';
 import AppHeader from './components/AppHeader.vue';
-import AppHeader from './components/projects/ProjectCard.vue';
+import ProjectsList from './components/projects/ProjectsList.vue';
 const apiBaseUrl = 'http://127.0.0.1:8000/api/'
 export default {
   name: 'App',
-  components: { AppHeader, ProjectCard },
+  components: { AppHeader, ProjectsList },
   data: () => ({
     projects: []
   }),
@@ -27,7 +27,7 @@ export default {
 <template>
   <AppHeader />
   <main class="container">
-    <ProjectCard />
+    <ProjectsList :projects="projects" />
 
   </main>
 </template>

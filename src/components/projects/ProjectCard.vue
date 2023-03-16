@@ -1,23 +1,25 @@
 <script>
 export default {
     name: 'ProjectCard',
-    props: { projects: object }
+    props: { project: Object }
 }
 </script>
 
 
-<!-- <template>
+<template>
     <section id="project-card">
-        <div class="card" style="width: 18rem;">
+        <div class="card my-3 mx-3" style="width: 18rem;height: 18rem;">
             <div class="card-body">
                 <h5 class="card-title">{{ project.title }}</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                    content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <p class="card-text">{{ project.content }}</p>
+                <div class="buttons d-flex justify-content-end">
+                    <button class="btn btn-primary ">Details</button>
+                </div>
+
             </div>
         </div>
     </section>
-</template>  -->
+</template> 
 
 
 <style></style>
